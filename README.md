@@ -10,8 +10,8 @@ Extensively tested on [netcup 2.99€/a VPS](https://www.netcup.de/bestellen/pro
 
 #### Upstream Links
 
-* Docker Registry @ [thedifferent/adminer-alpine](https://hub.docker.com/r/thedifferent/adminer/)
-* GitHub @ [thedifferent/docker-adminer](https://github.com/thedifferent/docker-adminer)
+* Docker Registry @ [thedifferent/docker-adminer](https://hub.docker.com/r/thedifferent/adminer-alpine/)
+* GitHub @ [IndividualDifference/docker-adminer](https://github.com/IndividualDifference/docker-adminer/)
 
 ### [](#header-2)About us:
 
