@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  db:
+    #image: thedifferent/mariadb
+    build: .
+    environment:
+      - "MYSQL_ROOT_HOST=localhost"
+      - "MYSQL_ROOT_PASSWORD=ciscocisco"
+      - "MYSQL_ROOT_PASSWORD_LOCAL=true"
+      - "MYSQL_DATABASE=wordpress"
+      - "MYSQL_USER=wp"
+      - "MYSQL_PASSWORD=cisco"
+    ports:
+      - "8888:8888"
