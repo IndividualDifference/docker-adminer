@@ -60,4 +60,4 @@ ENTRYPOINT ["/sbin/tini", "--", "/run.sh"]
 # change to none root user
 USER adminer
 
-CMD	[ "php", "-S", "[::]:8888", "-t", "/var/www/html" ]
+CMD    [ "php", "-S", "[::]:8888", "-t", "/var/www/html" ]
