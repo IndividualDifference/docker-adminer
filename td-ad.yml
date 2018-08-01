@@ -5,6 +5,11 @@ services:
     image: thedifferent/adminer-alpine
     #build: adminer/latest
     networks:
-      - "${AD_NW}"
+      - "proxy-net"
     ports:
       - "${AD_PORT}:8888"
+
+networks:
+  proxy-net:
+    external:
+      name: ${AD_NW}
