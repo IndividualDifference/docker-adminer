@@ -5,16 +5,16 @@ services:
     image: thedifferent/adminer-alpine
     #build: adminer/latest
     networks:
-      - "adminer"
-      - "traefik"
+      - "dbgui"
+      - "rvproxy"
     ports:
       - "${AD_PORT}:8888"
 
 networks:
-  adminer:
+  dbgui:
     external:
       name: adminer-net
 
-  traefik:
+  rvproxy:
     external:
       name: traefik-net
