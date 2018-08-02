@@ -5,11 +5,16 @@ services:
     image: thedifferent/adminer-alpine
     #build: adminer/latest
     networks:
-      - "proxy-net"
+      - "adminer"
+      - "traefik"
     ports:
       - "${AD_PORT}:8888"
 
 networks:
-  proxy-net:
+  adminer:
     external:
-      name: ${AD_NW}
+      name: adminer-net
+
+  traefik:
+    external:
+      name: traefik-net
