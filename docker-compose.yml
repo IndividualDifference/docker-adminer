@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   adminer:
-    #image: thedifferent/mariadb
+    #image: thedifferent/adminer-alpine
     build: adminer/latest
 
     ports:
