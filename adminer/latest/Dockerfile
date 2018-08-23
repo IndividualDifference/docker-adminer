@@ -52,10 +52,10 @@ EXPOSE 8888
 ADD LICENSE /
 
 # deploy init script
-ADD run.sh /
+ADD entrypoint.sh /
 
 # starting via tini as init
-ENTRYPOINT ["/sbin/tini", "--", "/run.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/entrypoint.sh"]
 
 # change to none root user
 USER adminer
