@@ -52,10 +52,10 @@ EXPOSE 8888
 ADD LICENSE /
 
 # deploy init script
-ADD entrypoint.sh /
+ADD docker-entrypoint.sh /
 
 # starting via tini as init
-ENTRYPOINT ["/sbin/tini", "--", "/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 
 # change to none root user
 USER adminer
