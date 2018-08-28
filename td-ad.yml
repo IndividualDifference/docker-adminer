@@ -4,17 +4,22 @@ services:
   adminer:
     image: thedifferent/adminer-alpine
     #build: adminer/latest
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=8888"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:${TRAEFIK_FR_Host}"
+        - "traefik.backend=${DOCKERCLOUD_CONTAINER_HOSTNAME}"
     networks:
       - "dbgui"
       - "rvproxy"
-    ports:
-      - "${AD_PORT}:8888"
 
 networks:
   dbgui:
     external:
       name: adminer-net
-
   rvproxy:
     external:
       name: traefik-net
